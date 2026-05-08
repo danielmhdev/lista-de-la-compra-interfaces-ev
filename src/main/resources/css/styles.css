@@ -1,0 +1,145 @@
+/*
+   El root aplica a toda la ventana principal de la aplicacion.
+*/
+.root {
+    -fx-background-color: #f7f9fc;
+    -fx-font-family: Arial, sans-serif;
+}
+
+/* === TEXTOS Y ETIQUETAS === */
+
+/* Estilo para el titulo principal de la app */
+.title-label {
+    -fx-text-fill: #4a4063; /* Color morado oscuro */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Estilo para el contador de productos en la parte inferior */
+.total-label {
+    -fx-text-fill: #4a4063;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Como se ve el nombre de un producto normal en la lista */
+.product-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2c3e50; /* Gris muy oscuro, casi negro, para que se lea bien */
+}
+
+/* Pone el texto en gris claro y lo tacha simulando que ya esta comprado. */
+.product-label-crossed {
+    -fx-text-fill: #95a5a6;
+    -fx-strikethrough: true;
+}
+
+/* Asegura que la linea de tachado se dibuje correctamente en el texto interno */
+.product-label-crossed .text {
+    -fx-strikethrough: true;
+}
+
+
+/* === INPUTS (Campos de texto y Checkbox) === */
+
+/* El campo donde escribimos el nuevo producto a añadir */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #aeb4b7;
+    -fx-border-radius: 5px; /* Bordes ligeramente redondeados */
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+/* El campo de texto que aparece *solo* cuando le damos al lapiz para editar un producto */
+.edit-text-field {
+    -fx-background-color: white;
+    -fx-border-color: #3498db; /* Borde azul para indicar que estamos editando */
+    -fx-border-radius: 3px;
+    -fx-padding: 2px 5px;
+}
+
+/* Hacemos que el cursor cambie a la "mano" al pasar por encima del checkbox */
+.checkbox {
+    -fx-cursor: hand;
+}
+
+
+/* === BOTONES PRINCIPALES (Añadir y Vaciar) === */
+
+/* Estilos basicos que comparten todos los botones grandes */
+.button {
+    -fx-text-fill: #1a252f;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+/* Colores especificos para el boton de "Añadir" (verde pastel) y su efecto al pasar el raton (:hover) */
+.button-add {
+    -fx-background-color: #a8e6cf;
+}
+.button-add:hover {
+    -fx-background-color: #88d4b8;
+}
+
+/* Colores especificos para el boton de "Vaciar Lista" (rosa pastel) */
+.button-clear {
+    -fx-background-color: #ffb3ba;
+}
+.button-clear:hover {
+    -fx-background-color: #ff949f;
+}
+
+
+/* === ESTILOS DE LA LISTA (ListView) === */
+
+/* El recuadro blanco grande que contiene todos los productos */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1d8e0;
+    -fx-border-radius: 5px;
+}
+
+/* Evitamos que la celda entera se pinte de azul al hacer clic */
+.list-cell, .list-cell:filled:selected, .list-cell:filled:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: inherit;
+}
+
+/* Estilo para cada fila individual (HBox) */
+.cell-container {
+    -fx-padding: 10px;
+    /* Ponemos color solo al borde de abajo para crear una linea separadora entre productos */
+    -fx-border-color: transparent transparent #e0e6ed transparent;
+    -fx-border-width: 1px;
+}
+
+
+/* === BOTONES DE ACCION EN CADA FILA (Lapiz y Papelera) === */
+
+/* Comparten fondo transparente y bordes para que parezcan simples iconos */
+.button-icon {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+}
+
+/* El emoji del Lapiz se pinta de naranja y pone un fondo amarillento al pasar el raton */
+.button-edit {
+    -fx-text-fill: #f39c12;
+}
+.button-edit:hover {
+    -fx-background-color: #fdf5e6;
+}
+
+/* El emoji de la Papelera se pinta de rojo y pone un fondo rojizo al pasar el raton */
+.button-delete {
+    -fx-text-fill: #e74c3c;
+}
+.button-delete:hover {
+    -fx-background-color: #fdeaea;
+}
